@@ -7,6 +7,7 @@ const SearchForm = (props) => {
   const search = async (e) => {
     props.history.push({
       pathname: "/search",
+      search: "=" + props.searchText,
       state: await props.handleSubmit(e),
     });
   };
